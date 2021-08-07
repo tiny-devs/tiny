@@ -207,11 +207,7 @@ export class GameClient {
     }
 
     setupWebSocket() {
-        let socketProtocol = 'wss'
-        if (location.protocol !== 'https:') {
-            socketProtocol = 'ws'
-        }
-        this.ws = new WebSocket(`${socketProtocol}://${window.location.host}/ws`)
+        this.ws = new WebSocket(`wss://tinyland.herokuapp.com/ws`)
         this.initWebSocket()
     }
 
